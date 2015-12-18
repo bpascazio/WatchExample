@@ -19,6 +19,8 @@
 		C14AF86F1C237DC3008F831D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14AF86E1C237DC3008F831D /* InterfaceController.swift */; };
 		C14AF8711C237DC3008F831D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14AF8701C237DC3008F831D /* ExtensionDelegate.swift */; };
 		C14AF8731C237DC3008F831D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C14AF8721C237DC3008F831D /* Assets.xcassets */; };
+		C14AF8831C23874B008F831D /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14AF8821C23874B008F831D /* GlanceController.swift */; };
+		C14AF8851C238C2C008F831D /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C14AF8841C238C2C008F831D /* WatchConnectivity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		C14AF8701C237DC3008F831D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		C14AF8721C237DC3008F831D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C14AF8741C237DC3008F831D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C14AF8821C23874B008F831D /* GlanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		C14AF8841C238C2C008F831D /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C14AF8851C238C2C008F831D /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +108,7 @@
 		C14AF83F1C237DC3008F831D = {
 			isa = PBXGroup;
 			children = (
+				C14AF8841C238C2C008F831D /* WatchConnectivity.framework */,
 				C14AF84A1C237DC3008F831D /* WatchExample */,
 				C14AF85E1C237DC3008F831D /* WatchExample WatchKit App */,
 				C14AF86D1C237DC3008F831D /* WatchExample WatchKit Extension */,
@@ -150,6 +156,7 @@
 				C14AF8701C237DC3008F831D /* ExtensionDelegate.swift */,
 				C14AF8721C237DC3008F831D /* Assets.xcassets */,
 				C14AF8741C237DC3008F831D /* Info.plist */,
+				C14AF8821C23874B008F831D /* GlanceController.swift */,
 			);
 			path = "WatchExample WatchKit Extension";
 			sourceTree = "<group>";
@@ -297,6 +304,7 @@
 			files = (
 				C14AF8711C237DC3008F831D /* ExtensionDelegate.swift in Sources */,
 				C14AF86F1C237DC3008F831D /* InterfaceController.swift in Sources */,
+				C14AF8831C23874B008F831D /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WatchExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bytefly.WatchExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,6 +509,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WatchExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bytefly.WatchExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

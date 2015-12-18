@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchExample_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <slider width="1" alignment="left" value="1" maximum="5" steps="5" id="LgD-uA-uiy"/>
+                        <picker height="100" alignment="left" id="EbV-Xs-vSd"/>
+                        <button width="1" alignment="left" title="Show Alert" id="1Iz-bt-7Ll">
+                            <connections>
+                                <action selector="showAlertPressed" destination="AgC-eL-Hgc" id="Ejb-lD-dyn"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="picker" destination="EbV-Xs-vSd" id="hgK-ha-0qg"/>
+                        <outlet property="slider" destination="LgD-uA-uiy" id="1qM-GJ-oFE"/>
+                    </connections>
+                </controller>
             </objects>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="0jI-hO-3o3">
+            <objects>
+                <glanceController topTemplateType="groupLeftSmall" bottomTemplateType="extraLargeLargeBody1Footer" id="aC2-v4-QDs" customClass="GlanceController" customModule="WatchExample_WatchKit_Extension">
+                    <items>
+                        <group alignment="left" id="mgE-8Q-wAm">
+                            <items>
+                                <imageView width="1" height="1" alignment="left" id="VQa-gk-Pf5"/>
+                            </items>
+                        </group>
+                        <label alignment="left" text="Label" id="d6f-lG-4DT"/>
+                        <label alignment="left" text="Label" id="JW6-Ub-QA2"/>
+                        <label alignment="left" text="Label" id="KFC-Ud-har"/>
+                        <label alignment="left" text="1234" id="74H-yb-wGU"/>
+                        <label alignment="left" text="1234" id="Qd5-jJ-9vb"/>
+                        <label alignment="left" text="Label" id="Gik-Sf-Zhr"/>
+                        <label alignment="left" text="Footer" id="1Lp-RR-VjX"/>
+                    </items>
+                    <connections>
+                        <outlet property="bigNumber" destination="74H-yb-wGU" id="f8C-tM-p7m"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="381" y="566"/>
         </scene>
     </scenes>
 </document>
